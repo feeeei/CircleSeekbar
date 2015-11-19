@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="def_wheel_width">32dp</dimen>
+    <dimen name="def_shadow_radius">2dp</dimen>
+    <dimen name="def_shadow_offset">2dp</dimen>
+</resources>

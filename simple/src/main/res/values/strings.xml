@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CircleSeekBar</string>
+    <string name="title_activity_style1">Style1Activity</string>
+    <string name="title_activity_style2">Style2Activity</string>
+    <string name="title_activity_with_shadow">withShadowActivity</string>
+    <string name="title_activity_with_text">WithTextActivity</string>
+    <string name="title_activity_down_load">DownLoadActivity</string>
+    <string name="title_activity_union">UnionActivity</string>
+</resources>

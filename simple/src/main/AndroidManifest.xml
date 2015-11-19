@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.io.feeeei.circleseekbar">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Style1Activity"
+            android:label="@string/title_activity_style1"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Style2Activity"
+            android:label="@string/title_activity_style2"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name=".WithShadowActivity"
+            android:label="@string/title_activity_with_shadow"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".WithTextActivity"
+            android:label="@string/title_activity_with_text"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DownLoadActivity"
+            android:label="@string/title_activity_down_load"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UnionActivity"
+            android:label="@string/title_activity_union"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>
