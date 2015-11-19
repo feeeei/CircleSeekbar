@@ -6,6 +6,30 @@ an android circle seekbar library
 
 ----
 
+## quick start
+####1.Add root build.gradle
+```
+ repositories {
+        // ...
+        maven { url "https://jitpack.io" }
+ }
+```
+####2.Add build.gradle
+```
+dependencies {
+	        compile 'com.github.feeeei:CircleSeekbar:v1.0.1'
+	}
+```
+####3.Added to the XML
+```
+    <io.feeeei.circleseekbar.CircleSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:wheel_max_process="100"
+        />
+```
+
 ## attrs
 ```
   <attr name="wheel_max_process" format="integer" />
