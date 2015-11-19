@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="test.io.feeeei.circleseekbar.WithTextActivity">
 
-    <io.gpf.circleseekbar.CircleSeekBar
+    <io.feeeei.circleseekbar.CircleSeekBar
         android:id="@+id/seekbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
