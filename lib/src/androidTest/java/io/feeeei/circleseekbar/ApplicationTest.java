@@ -1,4 +1,4 @@
-package io.gpf.circleseekbar;
+package io.feeeei.circleseekbar;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

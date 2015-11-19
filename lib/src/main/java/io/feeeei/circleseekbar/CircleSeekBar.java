@@ -15,8 +15,6 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import io.gpf.circleseekbar.R;
-
 /**
  * Created by gaopengfei on 15/11/15.
  */

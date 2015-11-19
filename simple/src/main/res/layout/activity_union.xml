@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="test.io.feeeei.circleseekbar.UnionActivity">
 
-    <io.gpf.circleseekbar.CircleSeekBar
+    <io.feeeei.circleseekbar.CircleSeekBar
         android:id="@+id/seek_minute"
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -15,7 +15,7 @@
         app:wheel_unreached_width="32dp" />
 
     <!--     300-32-32 = 236   -->
-    <io.gpf.circleseekbar.CircleSeekBar
+    <io.feeeei.circleseekbar.CircleSeekBar
         android:id="@+id/seek_hour"
         android:layout_width="236dp"
         android:layout_height="236dp"
