@@ -20,7 +20,7 @@
         android:layout_width="236dp"
         android:layout_height="236dp"
         android:layout_centerInParent="true"
-        app:wheel_max_process="23"
+        app:wheel_max_process="11"
         app:wheel_pointer_color="@color/colorPrimaryDark"
         app:wheel_pointer_radius="8dp"
         app:wheel_reached_color="@color/colorAccent"
