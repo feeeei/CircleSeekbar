@@ -33,7 +33,7 @@ dependencies {
 ## attrs
 ```
   <!-- process -->
-  <b><attr name="wheel_max_process" format="integer" /></b>
+  <attr name="wheel_max_process" format="integer" />
   <attr name="wheel_cur_process" format="integer" />
   
   <!-- reached style -->
