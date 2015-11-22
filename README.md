@@ -57,7 +57,8 @@ dependencies {
   <!-- If you want to open the wheel shadow, open this can speed up the rendering speed -->
   <attr name="wheel_has_cache" format="boolean" />
   
-  <!-- If you want to block touchListener,use like processBar, only allow the code to control the schedule, you can change this attribute to false -->
+  <!-- If you want to block touchListener,use like processBar,
+   only allow the code to control the schedule, you can change this attribute to false -->
   <attr name="wheel_can_touch" format="boolean" />    
 ```
 
