@@ -54,10 +54,10 @@ dependencies {
   <attr name="wheel_pointer_shadow_radius" format="dimension" />
   <attr name="wheel_shadow_radius" format="dimension" />
   
-  <!-- If you want to open the wheel shadow, open this can speed up the rendering speed -->
+  <!-- if you want to open the wheel shadow, open this can speed up the rendering speed -->
   <attr name="wheel_has_cache" format="boolean" />
   
-  <!-- If you want to block touchListener,use like processBar,
+  <!-- if you want to block touchListener,use like processBar,
    only allow the code to control the schedule, you can change this attribute to false -->
   <attr name="wheel_can_touch" format="boolean" />    
 ```
