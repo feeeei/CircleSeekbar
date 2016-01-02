@@ -23,7 +23,6 @@ android {
 dependencies {
     compile project(':lib')
     compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
 }
 
 task checkstyle(type: Checkstyle) {
