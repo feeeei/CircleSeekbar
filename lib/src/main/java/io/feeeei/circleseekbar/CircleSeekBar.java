@@ -27,6 +27,7 @@ public class CircleSeekBar extends View {
     private static final String INSTANCE_CUR_PROCESS = "cur_process";
     private static final String INSTANCE_REACHED_COLOR = "reached_color";
     private static final String INSTANCE_REACHED_WIDTH = "reached_width";
+    private static final String INSTANCE_REACHED_CORNER_ROUND = "reached_corner_round";
     private static final String INSTANCE_UNREACHED_COLOR = "unreached_color";
     private static final String INSTANCE_UNREACHED_WIDTH = "unreached_width";
     private static final String INSTANCE_POINTER_COLOR = "pointer_color";
@@ -50,11 +51,11 @@ public class CircleSeekBar extends View {
     private int mCurProcess;
     private int mReachedColor, mUnreachedColor;
     private float mReachedWidth, mUnreachedWidth;
+    private boolean isHasReachedCornerRound;
     private int mPointerColor;
     private float mPointerRadius;
 
     private double mCurAngle;
-    private float mInitWheelX, mInitWheelY;
     private float mWheelCurX, mWheelCurY;
 
     private boolean isHasWheelShadow, isHasPointerShadow;
@@ -105,6 +106,9 @@ public class CircleSeekBar extends View {
         mReachedPaint.setColor(mReachedColor);
         mReachedPaint.setStyle(Paint.Style.STROKE);
         mReachedPaint.setStrokeWidth(mReachedWidth);
+        if (isHasReachedCornerRound) {
+            mReachedPaint.setStrokeCap(Paint.Cap.ROUND);
+        }
         /**
          * 锚点画笔
          */
@@ -129,6 +133,7 @@ public class CircleSeekBar extends View {
         mReachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_reached_color, getColor(R.color.def_reached_color));
         mUnreachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_unreached_color, getColor(R.color.def_wheel_color));
         mUnreachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_unreached_width, getDimen(R.dimen.def_wheel_width));
+        isHasReachedCornerRound = a.getBoolean(R.styleable.CircleSeekBar_wheel_reached_has_corner_round, true);
         mReachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_reached_width, mUnreachedWidth);
         mPointerColor = a.getColor(R.styleable.CircleSeekBar_wheel_pointer_color, getColor(R.color.def_pointer_color));
         mPointerRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_pointer_radius, mReachedWidth / 2);
@@ -190,8 +195,6 @@ public class CircleSeekBar extends View {
         int min = Math.min(width, height);
         setMeasuredDimension(min, min);
 
-        mInitWheelX = min / 2;
-        mInitWheelY = getPaddingTop() + mUnreachedWidth / 2;
         mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
         double cos = -Math.cos(Math.toRadians(mCurAngle));
         float radius = (getWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
@@ -222,10 +225,6 @@ public class CircleSeekBar extends View {
         //画选中区域
         canvas.drawArc(new RectF(left, top, right, bottom), -90, (float) mCurAngle, false, mReachedPaint);
 
-        //画选中区域圆角边
-        canvas.drawCircle(mInitWheelX, mInitWheelY, mReachedWidth / 2, mReachedEdgePaint);
-        canvas.drawCircle(mWheelCurX, mWheelCurY, mReachedWidth / 2, mReachedEdgePaint);
-
         //画锚点
         canvas.drawCircle(mWheelCurX, mWheelCurY, mPointerRadius, mPointerPaint);
     }
@@ -236,7 +235,6 @@ public class CircleSeekBar extends View {
 
         //画环
         mCacheCanvas.drawCircle(centerX, centerY, wheelRadius, mWheelPaint);
-
     }
 
     @Override
@@ -300,7 +298,6 @@ public class CircleSeekBar extends View {
         return height / slope;
     }
 
-
     @Override
     protected Parcelable onSaveInstanceState() {
         Bundle bundle = new Bundle();
@@ -309,6 +306,7 @@ public class CircleSeekBar extends View {
         bundle.putInt(INSTANCE_CUR_PROCESS, mCurProcess);
         bundle.putInt(INSTANCE_REACHED_COLOR, mReachedColor);
         bundle.putFloat(INSTANCE_REACHED_WIDTH, mReachedWidth);
+        bundle.putBoolean(INSTANCE_REACHED_CORNER_ROUND, isHasReachedCornerRound);
         bundle.putInt(INSTANCE_UNREACHED_COLOR, mUnreachedColor);
         bundle.putFloat(INSTANCE_UNREACHED_WIDTH, mUnreachedWidth);
         bundle.putInt(INSTANCE_POINTER_COLOR, mPointerColor);
@@ -322,7 +320,6 @@ public class CircleSeekBar extends View {
         return bundle;
     }
 
-
     @Override
     protected void onRestoreInstanceState(Parcelable state) {
         if (state instanceof Bundle) {
@@ -332,6 +329,7 @@ public class CircleSeekBar extends View {
             mCurProcess = bundle.getInt(INSTANCE_CUR_PROCESS);
             mReachedColor = bundle.getInt(INSTANCE_REACHED_COLOR);
             mReachedWidth = bundle.getFloat(INSTANCE_REACHED_WIDTH);
+            isHasReachedCornerRound = bundle.getBoolean(INSTANCE_REACHED_CORNER_ROUND);
             mUnreachedColor = bundle.getInt(INSTANCE_UNREACHED_COLOR);
             mUnreachedWidth = bundle.getFloat(INSTANCE_UNREACHED_WIDTH);
             mPointerColor = bundle.getInt(INSTANCE_POINTER_COLOR);
@@ -397,6 +395,16 @@ public class CircleSeekBar extends View {
         this.mReachedWidth = reachedWidth;
         mReachedPaint.setStrokeWidth(reachedWidth);
         mReachedEdgePaint.setStrokeWidth(reachedWidth);
+        invalidate();
+    }
+
+    public boolean isHasReachedCornerRound() {
+        return isHasReachedCornerRound;
+    }
+
+    public void setHasReachedCornerRound(boolean hasReachedCornerRound) {
+        isHasReachedCornerRound = hasReachedCornerRound;
+        mReachedPaint.setStrokeCap(hasReachedCornerRound ? Paint.Cap.ROUND : Paint.Cap.BUTT);
         invalidate();
     }
 
@@ -479,5 +487,4 @@ public class CircleSeekBar extends View {
     public interface OnSeekBarChangeListener {
         void onChanged(CircleSeekBar seekbar, int maxValue, int curValue);
     }
-
 }
