@@ -37,7 +37,7 @@ public class UnionActivity extends AppCompatActivity {
             }
         });
 
-        mHourSeekbar.setCurProcess(12);
+        mHourSeekbar.setCurProcess(5);
 
         mMinuteSeekbar.setCurProcess(30);
     }
