@@ -131,19 +131,23 @@ public class CircleSeekBar extends View {
         mCurProcess = a.getInt(R.styleable.CircleSeekBar_wheel_cur_process, 0);
         if (mCurProcess > mMaxProcess) mCurProcess = mMaxProcess;
         mReachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_reached_color, getColor(R.color.def_reached_color));
-        mUnreachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_unreached_color, getColor(R.color.def_wheel_color));
-        mUnreachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_unreached_width, getDimen(R.dimen.def_wheel_width));
+        mUnreachedColor = a.getColor(R.styleable.CircleSeekBar_wheel_unreached_color,
+                getColor(R.color.def_wheel_color));
+        mUnreachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_unreached_width,
+                getDimen(R.dimen.def_wheel_width));
         isHasReachedCornerRound = a.getBoolean(R.styleable.CircleSeekBar_wheel_reached_has_corner_round, true);
         mReachedWidth = a.getDimension(R.styleable.CircleSeekBar_wheel_reached_width, mUnreachedWidth);
         mPointerColor = a.getColor(R.styleable.CircleSeekBar_wheel_pointer_color, getColor(R.color.def_pointer_color));
         mPointerRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_pointer_radius, mReachedWidth / 2);
         isHasWheelShadow = a.getBoolean(R.styleable.CircleSeekBar_wheel_has_wheel_shadow, false);
         if (isHasWheelShadow) {
-            mWheelShadowRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_shadow_radius, getDimen(R.dimen.def_shadow_radius));
+            mWheelShadowRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_shadow_radius,
+                    getDimen(R.dimen.def_shadow_radius));
         }
         isHasPointerShadow = a.getBoolean(R.styleable.CircleSeekBar_wheel_has_pointer_shadow, false);
         if (isHasPointerShadow) {
-            mPointerShadowRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_pointer_shadow_radius, getDimen(R.dimen.def_shadow_radius));
+            mPointerShadowRadius = a.getDimension(R.styleable.CircleSeekBar_wheel_pointer_shadow_radius,
+                    getDimen(R.dimen.def_shadow_radius));
         }
         isHasCache = a.getBoolean(R.styleable.CircleSeekBar_wheel_has_cache, isHasWheelShadow);
         isCanTouch = a.getBoolean(R.styleable.CircleSeekBar_wheel_can_touch, true);
@@ -164,7 +168,8 @@ public class CircleSeekBar extends View {
             paddingStart = getPaddingStart();
             paddingEnd = getPaddingEnd();
         }
-        int maxPadding = Math.max(paddingLeft, Math.max(paddingTop, Math.max(paddingRight, Math.max(paddingBottom, Math.max(paddingStart, paddingEnd)))));
+        int maxPadding = Math.max(paddingLeft, Math.max(paddingTop,
+                Math.max(paddingRight, Math.max(paddingBottom, Math.max(paddingStart, paddingEnd)))));
         setPadding(maxPadding, maxPadding, maxPadding, maxPadding);
     }
 
@@ -245,9 +250,9 @@ public class CircleSeekBar extends View {
             // 通过当前触摸点搞到cos角度值
             float cos = computeCos(x, y);
             // 通过反三角函数获得角度值
-            if (x < getWidth() / 2) {// 滑动超过180度
+            if (x < getWidth() / 2) { // 滑动超过180度
                 mCurAngle = Math.PI * RADIAN + Math.acos(cos) * RADIAN;
-            } else {// 没有超过180度
+            } else { // 没有超过180度
                 mCurAngle = Math.PI * RADIAN - Math.acos(cos) * RADIAN;
             }
             mCurProcess = getSelectedValue();

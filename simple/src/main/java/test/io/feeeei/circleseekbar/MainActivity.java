@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
 
-    private Class[] mClasses = new Class[]{Style1Activity.class, Style2Activity.class, WithShadowActivity.class, WithTextActivity.class, DownLoadActivity.class, UnionActivity.class};
+    private Class[] mClasses = new Class[] {Style1Activity.class, Style2Activity.class, WithShadowActivity.class,
+            WithTextActivity.class, DownLoadActivity.class, UnionActivity.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mListView = (ListView) findViewById(R.id.listview);
-
 
         mListView.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, mClasses) {
             @Override
@@ -36,6 +36,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
