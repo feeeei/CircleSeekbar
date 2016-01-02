@@ -1,4 +1,4 @@
-## CircleSeekbar [![Build Status](https://travis-ci.org/feeeei/CircleSeekbar.svg?branch=master)](https://travis-ci.org/feeeei/CircleSeekbar)    [![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
+## CircleSeekbar [![Build Status](https://travis-ci.org/feeeei/CircleSeekbar.svg?branch=master)](https://travis-ci.org/feeeei/CircleSeekbar)  [![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
 an android circle seekbar library
 
 ----
@@ -17,7 +17,7 @@ an android circle seekbar library
 ####2.Add build.gradle
 ```
 dependencies {
-	        compile 'com.github.feeeei:CircleSeekbar:v1.0.1'
+	        compile 'com.github.feeeei:CircleSeekbar:v1.0.2'
 	}
 ```
 ####3.Added to the XML
