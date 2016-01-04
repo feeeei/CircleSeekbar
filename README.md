@@ -1,10 +1,16 @@
-## CircleSeekbar [![Build Status](https://travis-ci.org/feeeei/CircleSeekbar.svg?branch=master)](https://travis-ci.org/feeeei/CircleSeekbar)  [![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
+## CircleSeekbar 
+[![Build Status](https://travis-ci.org/feeeei/CircleSeekbar.svg?branch=master)](https://travis-ci.org/feeeei/CircleSeekbar)
+[![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
+
+
 an android circle seekbar library
 
-----
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif)![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style2.gif)![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withshadow.gif)![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withtext.gif)![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/download.gif)![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/union.gif)
-
-----
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif)
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style2.gif)
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withshadow.gif)
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withtext.gif)
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/download.gif)
+![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/union.gif)
 
 ## quick start
 ####1.Add root build.gradle
