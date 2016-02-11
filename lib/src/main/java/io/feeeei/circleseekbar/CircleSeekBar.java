@@ -290,7 +290,7 @@ public class CircleSeekBar extends View {
     }
 
     private float calcYLocationInWheel(float cos, float radius) {
-        return getWidth() / 2 + radius * cos;
+        return getMeasuredWidth() / 2 + radius * cos;
     }
 
     /**
