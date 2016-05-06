@@ -368,6 +368,7 @@ public class CircleSeekBar extends View {
         if (mChangListener != null) {
             mChangListener.onChanged(this, mMaxProcess, curProcess);
         }
+        mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
         invalidate();
     }
 
