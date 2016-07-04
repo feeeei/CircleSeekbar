@@ -4,9 +4,7 @@
 
 
 an android circle seekbar library
-<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif" width="320" />
-<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif" width="320" />
-<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif" width="320" />
+
 ![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif)
 ![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style2.gif)
 ![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withshadow.gif)
