@@ -5,12 +5,12 @@
 
 an android circle seekbar library
 
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif)
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style2.gif)
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withshadow.gif)
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withtext.gif)
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/download.gif)
-![](https://github.com/feeeei/CircleSeekbar/blob/master/gifs/union.gif)
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style1.gif" width="220"/>
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/style2.gif" width="220"/>
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withshadow.gif" width="220"/>
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/withtext.gif" width="220"/>
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/download.gif" width="220"/>
+<img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/union.gif" width="220"/>
 
 ## quick start
 ####1.Add root build.gradle
