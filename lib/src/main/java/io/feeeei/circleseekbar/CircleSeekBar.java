@@ -180,7 +180,7 @@ public class CircleSeekBar extends View {
         if (version >= 23) {
             return getContext().getColor(colorId);
         } else {
-            return ContextCompat.getColor(getContext(),colorId);
+            return ContextCompat.getColor(getContext(), colorId);
         }
     }
 
