@@ -203,7 +203,7 @@ public class CircleSeekBar extends View {
         mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
         double cos = -Math.cos(Math.toRadians(mCurAngle));
         float radius = (getMeasuredWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
-        mWheelCurX = calcXLocationInWheel(mCurAngle > 180 ? 0 : min, (float) cos, radius);
+        mWheelCurX = calcXLocationInWheel(mCurAngle, (float) cos, radius);
         mWheelCurY = calcYLocationInWheel((float) cos, radius);
     }
 
@@ -258,7 +258,7 @@ public class CircleSeekBar extends View {
             mCurProcess = getSelectedValue();
 
             float radius = (getWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
-            mWheelCurX = calcXLocationInWheel(x, cos, radius);
+            mWheelCurX = calcXLocationInWheel(mCurAngle, cos, radius);
             mWheelCurY = calcYLocationInWheel(cos, radius);
             if (mChangListener != null) {
                 mChangListener.onChanged(this, mMaxProcess, mCurProcess);
@@ -281,8 +281,8 @@ public class CircleSeekBar extends View {
         return Math.max(mUnreachedWidth, Math.max(mReachedWidth, mPointerRadius));
     }
 
-    private float calcXLocationInWheel(float x, float cos, float radius) {
-        if (x > (getMeasuredWidth() / 2)) {
+    private float calcXLocationInWheel(double angle, float cos, float radius) {
+        if (angle < 180) {
             return (float) (getWidth() / 2 + Math.sqrt(1 - cos * cos) * radius);
         } else {
             return (float) (getWidth() / 2 - Math.sqrt(1 - cos * cos) * radius);
