@@ -11,6 +11,7 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -179,7 +180,7 @@ public class CircleSeekBar extends View {
         if (version >= 23) {
             return getContext().getColor(colorId);
         } else {
-            return getResources().getColor(colorId);
+            return ContextCompat.getColor(getContext(),colorId);
         }
     }
 
