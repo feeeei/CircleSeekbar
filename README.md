@@ -23,7 +23,7 @@ an android circle seekbar library
 ####2.Add build.gradle
 ```
 dependencies {
-	        compile 'com.github.feeeei:CircleSeekbar:v1.0.3'
+	        compile 'com.github.feeeei:CircleSeekbar:v1.0.4'
 	}
 ```
 ####3.Added to the XML
