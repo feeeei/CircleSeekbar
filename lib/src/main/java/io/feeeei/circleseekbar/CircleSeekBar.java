@@ -372,7 +372,7 @@ public class CircleSeekBar extends View {
         double cos = Math.cos(Math.toRadians(mCurAngle));
         float radius = (getMeasuredWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
         mWheelCurX = calcXLocationInWheel(mCurAngle, (float) cos, radius);
-        mWheelCurY = calcYLocationInWheel((float)-cos, radius);
+        mWheelCurY = calcYLocationInWheel((float) -cos, radius);
         invalidate();
     }
 
