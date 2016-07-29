@@ -25,14 +25,14 @@ public class UnionActivity extends AppCompatActivity {
 
         mHourSeekbar.setOnSeekBarChangeListener(new CircleSeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onChanged(CircleSeekBar seekbar, int maxValue, int curValue) {
+            public void onChanged(CircleSeekBar seekbar, int curValue) {
                 changeText(curValue, mMinuteSeekbar.getCurProcess());
             }
         });
 
         mMinuteSeekbar.setOnSeekBarChangeListener(new CircleSeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onChanged(CircleSeekBar seekbar, int maxValue, int curValue) {
+            public void onChanged(CircleSeekBar seekbar, int curValue) {
                 changeText(mHourSeekbar.getCurProcess(), curValue);
             }
         });

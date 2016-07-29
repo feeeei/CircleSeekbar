@@ -35,7 +35,7 @@ public class DownLoadActivity extends AppCompatActivity {
 
         mProgress.setOnSeekBarChangeListener(new CircleSeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onChanged(CircleSeekBar seekbar, int maxValue, int curValue) {
+            public void onChanged(CircleSeekBar seekbar, int curValue) {
                 mTextView.setText("value:" + curValue);
             }
         });

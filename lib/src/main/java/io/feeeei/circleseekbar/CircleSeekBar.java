@@ -50,6 +50,7 @@ public class CircleSeekBar extends View {
 
     private int mMaxProcess;
     private int mCurProcess;
+    private float mUnreachedRadius;
     private int mReachedColor, mUnreachedColor;
     private float mReachedWidth, mUnreachedWidth;
     private boolean isHasReachedCornerRound;
@@ -201,11 +202,8 @@ public class CircleSeekBar extends View {
         int min = Math.min(width, height);
         setMeasuredDimension(min, min);
 
-        mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
-        double cos = -Math.cos(Math.toRadians(mCurAngle));
-        float radius = (getMeasuredWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
-        mWheelCurX = calcXLocationInWheel(mCurAngle, (float) cos, radius);
-        mWheelCurY = calcYLocationInWheel((float) cos, radius);
+        refershPosition();
+        refershUnreachedWidth();
     }
 
     @Override
@@ -257,12 +255,9 @@ public class CircleSeekBar extends View {
                 mCurAngle = Math.PI * RADIAN - Math.acos(cos) * RADIAN;
             }
             mCurProcess = getSelectedValue();
-
-            float radius = (getWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
-            mWheelCurX = calcXLocationInWheel(mCurAngle, cos, radius);
-            mWheelCurY = calcYLocationInWheel(cos, radius);
+            refershWheelCurPosition(cos);
             if (mChangListener != null) {
-                mChangListener.onChanged(this, mMaxProcess, mCurProcess);
+                mChangListener.onChanged(this, mCurProcess);
             }
             invalidate();
             return true;
@@ -282,16 +277,31 @@ public class CircleSeekBar extends View {
         return Math.max(mUnreachedWidth, Math.max(mReachedWidth, mPointerRadius));
     }
 
-    private float calcXLocationInWheel(double angle, float cos, float radius) {
+    private void refershUnreachedWidth() {
+        mUnreachedRadius = (getWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
+    }
+
+    private void refershWheelCurPosition(double cos) {
+        mWheelCurX = calcXLocationInWheel(mCurAngle, cos);
+        mWheelCurY = calcYLocationInWheel(cos);
+    }
+
+    private void refershPosition() {
+        mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
+        double cos = -Math.cos(Math.toRadians(mCurAngle));
+        refershWheelCurPosition(cos);
+    }
+
+    private float calcXLocationInWheel(double angle, double cos) {
         if (angle < 180) {
-            return (float) (getWidth() / 2 + Math.sqrt(1 - cos * cos) * radius);
+            return (float) (getWidth() / 2 + Math.sqrt(1 - cos * cos) * mUnreachedRadius);
         } else {
-            return (float) (getWidth() / 2 - Math.sqrt(1 - cos * cos) * radius);
+            return (float) (getWidth() / 2 - Math.sqrt(1 - cos * cos) * mUnreachedRadius);
         }
     }
 
-    private float calcYLocationInWheel(float cos, float radius) {
-        return getMeasuredWidth() / 2 + radius * cos;
+    private float calcYLocationInWheel(double cos) {
+        return getMeasuredWidth() / 2 + mUnreachedRadius * (float) cos;
     }
 
     /**
@@ -352,7 +362,7 @@ public class CircleSeekBar extends View {
         }
 
         if (mChangListener != null) {
-            mChangListener.onChanged(this, mMaxProcess, mCurProcess);
+            mChangListener.onChanged(this, mCurProcess);
         }
     }
 
@@ -367,13 +377,19 @@ public class CircleSeekBar extends View {
     public void setCurProcess(int curProcess) {
         this.mCurProcess = curProcess > mMaxProcess ? mMaxProcess : curProcess;
         if (mChangListener != null) {
-            mChangListener.onChanged(this, mMaxProcess, curProcess);
+            mChangListener.onChanged(this, curProcess);
         }
-        mCurAngle = (double) mCurProcess / mMaxProcess * 360.0;
-        double cos = Math.cos(Math.toRadians(mCurAngle));
-        float radius = (getMeasuredWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
-        mWheelCurX = calcXLocationInWheel(mCurAngle, (float) cos, radius);
-        mWheelCurY = calcYLocationInWheel((float) -cos, radius);
+        refershPosition();
+        invalidate();
+    }
+
+    public int getMaxProcess() {
+        return mMaxProcess;
+    }
+
+    public void setMaxProcess(int maxProcess) {
+        mMaxProcess = maxProcess;
+        refershPosition();
         invalidate();
     }
 
@@ -426,6 +442,7 @@ public class CircleSeekBar extends View {
     public void setUnreachedWidth(float unreachedWidth) {
         this.mUnreachedWidth = unreachedWidth;
         mWheelPaint.setStrokeWidth(unreachedWidth);
+        refershUnreachedWidth();
         invalidate();
     }
 
@@ -496,6 +513,6 @@ public class CircleSeekBar extends View {
     }
 
     public interface OnSeekBarChangeListener {
-        void onChanged(CircleSeekBar seekbar, int maxValue, int curValue);
+        void onChanged(CircleSeekBar seekbar, int curValue);
     }
 }

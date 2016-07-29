@@ -7,20 +7,20 @@ import io.feeeei.circleseekbar.CircleSeekBar;
 
 public class SetProcessActivity extends AppCompatActivity {
 
-    private CircleSeekBar mProgress;
+    private CircleSeekBar mSeekbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_process);
 
-        mProgress = (CircleSeekBar) findViewById(R.id.progress);
+        mSeekbar = (CircleSeekBar) findViewById(R.id.seekbar);
 
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int process = mProgress.getCurProcess();
-                mProgress.setCurProcess(process += 10);
+                int process = mSeekbar.getCurProcess();
+                mSeekbar.setCurProcess(process += 10);
             }
         });
     }
