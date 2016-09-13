@@ -312,9 +312,9 @@ public class CircleSeekBar extends View {
 
     private float calcXLocationInWheel(double angle, double cos) {
         if (angle < 180) {
-            return (float) (getWidth() / 2 + Math.sqrt(1 - cos * cos) * mUnreachedRadius);
+            return (float) (getMeasuredWidth() / 2 + Math.sqrt(1 - cos * cos) * mUnreachedRadius);
         } else {
-            return (float) (getWidth() / 2 - Math.sqrt(1 - cos * cos) * mUnreachedRadius);
+            return (float) (getMeasuredWidth() / 2 - Math.sqrt(1 - cos * cos) * mUnreachedRadius);
         }
     }
 
