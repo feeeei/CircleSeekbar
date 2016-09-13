@@ -1,6 +1,7 @@
 ## CircleSeekbar 
 [![Build Status](https://travis-ci.org/feeeei/CircleSeekbar.svg?branch=master)](https://travis-ci.org/feeeei/CircleSeekbar)
 [![API](https://img.shields.io/badge/API-7%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=7)
+[![JitPack](https://jitpack.io/v/feeeei/CircleSeekbar.svg)](https://jitpack.io/#feeeei/CircleSeekbar)
 
 
 an android circle seekbar library
