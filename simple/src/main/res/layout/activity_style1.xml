@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="test.io.feeeei.circleseekbar.Style1Activity">
 
 
@@ -10,5 +11,6 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
+        app:wheel_scroll_only_one_circle="true"
         android:padding="8dp" />
 </RelativeLayout>

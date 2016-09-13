@@ -39,6 +39,7 @@ public class CircleSeekBar extends View {
     private static final String INSTANCE_WHEEL_SHADOW_RADIUS = "wheel_shadow_radius";
     private static final String INSTANCE_WHEEL_HAS_CACHE = "wheel_has_cache";
     private static final String INSTANCE_WHEEL_CAN_TOUCH = "wheel_can_touch";
+    private static final String INSTANCE_WHEEL_SCROLL_ONLY_ONE_CIRCLE = "wheel_scroll_only_one_circle";
 
     private Paint mWheelPaint;
 
@@ -68,6 +69,8 @@ public class CircleSeekBar extends View {
     private Bitmap mCacheBitmap;
 
     private boolean isCanTouch;
+
+    private boolean isScrollOneCircle;
 
     private float mDefShadowOffset;
 
@@ -153,6 +156,7 @@ public class CircleSeekBar extends View {
         }
         isHasCache = a.getBoolean(R.styleable.CircleSeekBar_wheel_has_cache, isHasWheelShadow);
         isCanTouch = a.getBoolean(R.styleable.CircleSeekBar_wheel_can_touch, true);
+        isScrollOneCircle = a.getBoolean(R.styleable.CircleSeekBar_wheel_scroll_only_one_circle, false);
 
         if (isHasPointerShadow | isHasWheelShadow) {
             setSoftwareLayer();
@@ -249,10 +253,24 @@ public class CircleSeekBar extends View {
             // 通过当前触摸点搞到cos角度值
             float cos = computeCos(x, y);
             // 通过反三角函数获得角度值
+            double angle;
             if (x < getWidth() / 2) { // 滑动超过180度
-                mCurAngle = Math.PI * RADIAN + Math.acos(cos) * RADIAN;
+                angle = Math.PI * RADIAN + Math.acos(cos) * RADIAN;
             } else { // 没有超过180度
-                mCurAngle = Math.PI * RADIAN - Math.acos(cos) * RADIAN;
+                angle = Math.PI * RADIAN - Math.acos(cos) * RADIAN;
+            }
+            if (isScrollOneCircle) {
+                if (mCurAngle > 270 && angle < 90) {
+                    mCurAngle = 360;
+                    cos = -1;
+                } else if (mCurAngle < 90 && angle > 270) {
+                    mCurAngle = 0;
+                    cos = -1;
+                } else {
+                    mCurAngle = angle;
+                }
+            } else {
+                mCurAngle = angle;
             }
             mCurProcess = getSelectedValue();
             refershWheelCurPosition(cos);
@@ -333,6 +351,7 @@ public class CircleSeekBar extends View {
         bundle.putFloat(INSTANCE_WHEEL_SHADOW_RADIUS, mPointerShadowRadius);
         bundle.putBoolean(INSTANCE_WHEEL_HAS_CACHE, isHasCache);
         bundle.putBoolean(INSTANCE_WHEEL_CAN_TOUCH, isCanTouch);
+        bundle.putBoolean(INSTANCE_WHEEL_SCROLL_ONLY_ONE_CIRCLE, isScrollOneCircle);
         return bundle;
     }
 
@@ -356,6 +375,7 @@ public class CircleSeekBar extends View {
             mPointerShadowRadius = bundle.getFloat(INSTANCE_WHEEL_SHADOW_RADIUS);
             isHasCache = bundle.getBoolean(INSTANCE_WHEEL_HAS_CACHE);
             isCanTouch = bundle.getBoolean(INSTANCE_WHEEL_CAN_TOUCH);
+            isScrollOneCircle = bundle.getBoolean(INSTANCE_WHEEL_SCROLL_ONLY_ONE_CIRCLE);
             initPaints();
         } else {
             super.onRestoreInstanceState(state);

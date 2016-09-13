@@ -16,6 +16,7 @@
         <attr name="wheel_shadow_radius" format="dimension" />
         <attr name="wheel_has_cache" format="boolean" />
         <attr name="wheel_can_touch" format="boolean" />
+        <attr name="wheel_scroll_only_one_circle" format="boolean" />
     </declare-styleable>
 
 </resources>
