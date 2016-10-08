@@ -296,7 +296,7 @@ public class CircleSeekBar extends View {
     }
 
     private void refershUnreachedWidth() {
-        mUnreachedRadius = (getWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
+        mUnreachedRadius = (getMeasuredWidth() - getPaddingLeft() - getPaddingRight() - mUnreachedWidth) / 2;
     }
 
     private void refershWheelCurPosition(double cos) {
