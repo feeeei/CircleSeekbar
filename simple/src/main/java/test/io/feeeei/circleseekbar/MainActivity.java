@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
 
-    private Class[] mClasses = new Class[] {Style1Activity.class, Style2Activity.class, WithShadowActivity.class,
-            SetProcessActivity.class, WithTextActivity.class, DownLoadActivity.class, UnionActivity.class,
-            InflateActivity.class};
+    private Class[] mClasses = new Class[] {InflateActivity.class, Style1Activity.class, Style2Activity.class,
+            WithShadowActivity.class, SetProcessActivity.class, WithTextActivity.class, DownLoadActivity.class,
+            UnionActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
