@@ -274,7 +274,7 @@ public class CircleSeekBar extends View {
             }
             mCurProcess = getSelectedValue();
             refershWheelCurPosition(cos);
-            if (mChangListener != null) {
+            if (mChangListener != null && (event.getAction() & (MotionEvent.ACTION_MOVE | MotionEvent.ACTION_UP)) > 0) {
                 mChangListener.onChanged(this, mCurProcess);
             }
             invalidate();
