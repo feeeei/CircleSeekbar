@@ -528,6 +528,10 @@ public class CircleSeekBar extends View {
         invalidate();
     }
 
+    public void canTouch(boolean isCanTouch) {
+        this.isCanTouch = isCanTouch;
+    }
+
     public void setOnSeekBarChangeListener(OnSeekBarChangeListener listener) {
         mChangListener = listener;
     }
