@@ -14,20 +14,20 @@ an android circle seekbar library
 <img src="https://github.com/feeeei/CircleSeekbar/blob/master/gifs/union.gif" width="220"/>
 
 ## quick start
-####1.Add root build.gradle
+#### 1.Add root build.gradle
 ```
  repositories {
         // ...
         maven { url "https://jitpack.io" }
  }
 ```
-####2.Add build.gradle
+#### 2.Add build.gradle
 ```
 dependencies {
 	        compile 'com.github.feeeei:CircleSeekbar:v1.1.2'
 	}
 ```
-####3.Added to the XML
+#### 3.Added to the XML
 ```
     <io.feeeei.circleseekbar.CircleSeekBar
         android:id="@+id/seekbar"
@@ -71,7 +71,7 @@ dependencies {
   <attr name="wheel_scroll_only_one_circle" format="boolean" />
 ```
 
-##License
-####PGSL
-  please give me star license
+## License
+#### PGSL 
+please give me star license
 
