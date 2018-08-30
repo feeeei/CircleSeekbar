@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\AndroidProjects\\CircleSeekbar\\simple\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Parminder Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\8ab0ab25086f329d1343878a7093b075\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "4,11,12,13,19,27,28,29,32,33",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "239,694,765,848,1258,1854,1974,2037,2191,2254",
+                        "endLines": "8,11,12,18,24,27,28,31,32,33",
+                        "endColumns": "12,70,82,12,12,119,62,12,62,131",
+                        "endOffsets": "510,760,843,1253,1675,1969,2032,2186,2249,2381"
+                    },
+                    "to": {
+                        "startLines": "2,7,8,9,15,21,22,23,26,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,331,402,485,895,1317,1437,1500,1654,1717",
+                        "endLines": "6,7,8,14,20,21,22,25,26,27",
+                        "endColumns": "12,70,82,12,12,119,62,12,62,131",
+                        "endOffsets": "326,397,480,890,1312,1432,1495,1649,1712,1844"
+                    }
+                }
+            ]
+        }
+    ]
+}

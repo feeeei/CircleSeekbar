@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\AndroidProjects\\CircleSeekbar\\simple\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Parminder Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\8ab0ab25086f329d1343878a7093b075\\res\\values-h720dp\\values-h720dp.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "232",
+                        "endColumns": "66",
+                        "endOffsets": "294"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
