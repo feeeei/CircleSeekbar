@@ -24,8 +24,9 @@ an android circle seekbar library
 #### 2.Add build.gradle
 ```
 dependencies {
-	        compile 'com.github.feeeei:CircleSeekbar:v1.1.2'
-	}
+    // ..
+    implementation 'com.github.feeeei:CircleSeekbar:v1.1.3'
+}
 ```
 #### 3.Added to the XML
 ```

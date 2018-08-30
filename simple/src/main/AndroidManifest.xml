@@ -38,6 +38,10 @@
             android:name=".UnionActivity"
             android:label="@string/title_activity_union"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".SetEnableActivity"
+            android:label="@string/title_activity_set_enable"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".SetProcessActivity"/>
         <activity android:name=".InflateActivity"></activity>
     </application>
