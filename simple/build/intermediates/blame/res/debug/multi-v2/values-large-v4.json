@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\AndroidProjects\\CircleSeekbar\\simple\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Parminder Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\8ab0ab25086f329d1343878a7093b075\\res\\values-large\\values-large.xml",
+                    "from": {
+                        "startLines": "4,7,8,11,12,13,14,15,16,17,18,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "230,468,540,775,846,917,987,1057,1125,1193,1257,1493,1597",
+                        "endColumns": "61,71,58,70,70,69,69,67,67,63,54,103,115",
+                        "endOffsets": "287,535,594,841,912,982,1052,1120,1188,1252,1307,1592,1708"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,117,189,248,319,390,460,530,598,666,730,785,889",
+                        "endColumns": "61,71,58,70,70,69,69,67,67,63,54,103,115",
+                        "endOffsets": "112,184,243,314,385,455,525,593,661,725,780,884,1000"
+                    }
+                }
+            ]
+        }
+    ]
+}

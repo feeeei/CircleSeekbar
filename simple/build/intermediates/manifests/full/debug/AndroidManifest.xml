@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.io.feeeei.circleseekbar"
+    android:versionCode="1"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="test.io.feeeei.circleseekbar.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="test.io.feeeei.circleseekbar.Style1Activity"
+            android:label="@string/title_activity_style1"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.Style2Activity"
+            android:label="@string/title_activity_style2"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.WithShadowActivity"
+            android:label="@string/title_activity_with_shadow"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.WithTextActivity"
+            android:label="@string/title_activity_with_text"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.DownLoadActivity"
+            android:label="@string/title_activity_down_load"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.UnionActivity"
+            android:label="@string/title_activity_union"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="test.io.feeeei.circleseekbar.SetEnableActivity"
+            android:label="@string/title_activity_set_enable"
+            android:theme="@style/AppTheme" />
+        <activity android:name="test.io.feeeei.circleseekbar.SetProcessActivity" />
+        <activity android:name="test.io.feeeei.circleseekbar.InflateActivity" />
+    </application>
+
+</manifest>

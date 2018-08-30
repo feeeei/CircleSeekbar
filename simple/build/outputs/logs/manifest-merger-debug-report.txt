@@ -1,0 +1,142 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+MERGED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\8ab0ab25086f329d1343878a7093b075\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\support-v4-23.1.1.aar\b6984d695b50af51bba49a75b2f7c02d\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+	package
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:3:5-43
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:1-49:12
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:5:5-47:19
+MERGED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\8ab0ab25086f329d1343878a7093b075\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\8ab0ab25086f329d1343878a7093b075\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\support-v4-23.1.1.aar\b6984d695b50af51bba49a75b2f7c02d\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\support-v4-23.1.1.aar\b6984d695b50af51bba49a75b2f7c02d\AndroidManifest.xml:22:5-20
+	android:supportsRtl
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:8:9-35
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:7:9-41
+	android:allowBackup
+		ADDED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:6:9-43
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:9:9-40
+activity#test.io.feeeei.circleseekbar.MainActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:10:9-16:20
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:10:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:11:13-15:29
+action#android.intent.action.MAIN
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:12:17-68
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:14:17-76
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:14:27-74
+activity#test.io.feeeei.circleseekbar.Style1Activity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:17:9-20:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:19:13-58
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:20:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:18:13-43
+activity#test.io.feeeei.circleseekbar.Style2Activity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:21:9-24:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:23:13-58
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:24:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:22:13-43
+activity#test.io.feeeei.circleseekbar.WithShadowActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:25:9-28:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:27:13-63
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:28:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:26:13-47
+activity#test.io.feeeei.circleseekbar.WithTextActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:29:9-32:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:31:13-61
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:32:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:30:13-45
+activity#test.io.feeeei.circleseekbar.DownLoadActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:33:9-36:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:35:13-61
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:34:13-45
+activity#test.io.feeeei.circleseekbar.UnionActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:37:9-40:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:39:13-57
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:40:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:38:13-42
+activity#test.io.feeeei.circleseekbar.SetEnableActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:41:9-44:46
+	android:label
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:43:13-62
+	android:theme
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:44:13-44
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:42:13-46
+activity#test.io.feeeei.circleseekbar.SetProcessActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:45:9-55
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:45:19-53
+activity#test.io.feeeei.circleseekbar.InflateActivity
+ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:46:9-62
+	android:name
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml:46:19-50
+uses-sdk
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+MERGED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:lib] C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\8ab0ab25086f329d1343878a7093b075\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\appcompat-v7-23.1.1.aar\8ab0ab25086f329d1343878a7093b075\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\support-v4-23.1.1.aar\b6984d695b50af51bba49a75b2f7c02d\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Parminder Singh\.gradle\caches\transforms-1\files-1.1\support-v4-23.1.1.aar\b6984d695b50af51bba49a75b2f7c02d\AndroidManifest.xml:20:5-43
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		ADDED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml
+		INJECTED from C:\AndroidProjects\CircleSeekbar\simple\src\main\AndroidManifest.xml

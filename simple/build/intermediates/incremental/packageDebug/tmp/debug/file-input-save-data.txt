@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Aug 30 11:32:07 CEST 2018
+0.baseType=DIRECTORY
+0.base=C\:\\AndroidProjects\\CircleSeekbar\\simple\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

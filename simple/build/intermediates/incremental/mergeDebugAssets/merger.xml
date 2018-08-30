@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config=":lib"><source path="C:\AndroidProjects\CircleSeekbar\lib\build\intermediates\packagedAssets\debug"/></dataSet><dataSet config="main"><source path="C:\AndroidProjects\CircleSeekbar\simple\src\main\assets"/><source path="C:\AndroidProjects\CircleSeekbar\simple\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\AndroidProjects\CircleSeekbar\simple\src\debug\assets"/></dataSet></merger>

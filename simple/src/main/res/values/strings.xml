@@ -6,4 +6,5 @@
     <string name="title_activity_with_text">WithTextActivity</string>
     <string name="title_activity_down_load">DownLoadActivity</string>
     <string name="title_activity_union">UnionActivity</string>
+    <string name="title_activity_set_enable">SetEnableActivity</string>
 </resources>

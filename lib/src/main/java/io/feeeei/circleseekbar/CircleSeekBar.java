@@ -247,6 +247,9 @@ public class CircleSeekBar extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if(!isEnabled())
+            return false;
+
         float x = event.getX();
         float y = event.getY();
         if (isCanTouch && (event.getAction() == MotionEvent.ACTION_MOVE || isTouch(x, y))) {
@@ -390,6 +393,12 @@ public class CircleSeekBar extends View {
         return Math.round(mMaxProcess * ((float) mCurAngle / 360));
     }
 
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
+
+        ensureCorrectColors();
+    }
+
     public int getCurProcess() {
         return mCurProcess;
     }
@@ -419,8 +428,7 @@ public class CircleSeekBar extends View {
 
     public void setReachedColor(int reachedColor) {
         this.mReachedColor = reachedColor;
-        mReachedPaint.setColor(reachedColor);
-        mReachedEdgePaint.setColor(reachedColor);
+        ensureCorrectColors();
         invalidate();
     }
 
@@ -430,7 +438,7 @@ public class CircleSeekBar extends View {
 
     public void setUnreachedColor(int unreachedColor) {
         this.mUnreachedColor = unreachedColor;
-        mWheelPaint.setColor(unreachedColor);
+        ensureCorrectColors();
         invalidate();
     }
 
@@ -472,7 +480,7 @@ public class CircleSeekBar extends View {
 
     public void setPointerColor(int pointerColor) {
         this.mPointerColor = pointerColor;
-        mPointerPaint.setColor(pointerColor);
+        ensureCorrectColors();
     }
 
     public float getPointerRadius() {
@@ -534,5 +542,22 @@ public class CircleSeekBar extends View {
 
     public interface OnSeekBarChangeListener {
         void onChanged(CircleSeekBar seekbar, int curValue);
+    }
+
+    private void ensureCorrectColors() {
+        if (isEnabled()) {
+            mReachedColor = Color.rgb(Color.red(mReachedColor), Color.green(mReachedColor), Color.blue(mReachedColor));
+            mUnreachedColor = Color.rgb(Color.red(mUnreachedColor), Color.green(mUnreachedColor), Color.blue(mUnreachedColor));
+            mPointerColor = Color.rgb(Color.red(mPointerColor), Color.green(mPointerColor), Color.blue(mPointerColor));
+        } else {
+            mReachedColor = Color.argb(30, Color.red(mReachedColor), Color.green(mReachedColor), Color.blue(mReachedColor));
+            mUnreachedColor = Color.argb(30, Color.red(mUnreachedColor), Color.green(mUnreachedColor), Color.blue(mUnreachedColor));
+            mPointerColor = Color.argb(30, Color.red(mPointerColor), Color.green(mPointerColor), Color.blue(mPointerColor));
+        }
+
+        mReachedPaint.setColor(mReachedColor);
+        mReachedEdgePaint.setColor(mReachedColor);
+        mWheelPaint.setColor(mUnreachedColor);
+        mPointerPaint.setColor(mPointerColor);
     }
 }

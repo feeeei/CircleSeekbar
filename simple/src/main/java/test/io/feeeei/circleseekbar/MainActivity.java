@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Class[] mClasses = new Class[] {InflateActivity.class, Style1Activity.class, Style2Activity.class,
             WithShadowActivity.class, SetProcessActivity.class, WithTextActivity.class, DownLoadActivity.class,
-            UnionActivity.class};
+            UnionActivity.class, SetEnableActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, mClasses[position]);
+
                 startActivity(intent);
             }
         });
