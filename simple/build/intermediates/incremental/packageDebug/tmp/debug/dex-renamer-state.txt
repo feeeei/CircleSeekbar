@@ -1,0 +1,4 @@
+#Thu Aug 30 11:32:06 CEST 2018
+base.0=C\:\\AndroidProjects\\CircleSeekbar\\simple\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

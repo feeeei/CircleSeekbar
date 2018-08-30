@@ -25,7 +25,7 @@ an android circle seekbar library
 ```
 dependencies {
     // ..
-    implementation 'com.github.feeeei:CircleSeekbar:v1.1.3'
+    implementation 'com.github.parminder93:CircleSeekbar:v1.1.3'
 }
 ```
 #### 3.Added to the XML
