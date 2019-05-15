@@ -535,4 +535,9 @@ public class CircleSeekBar extends View {
     public interface OnSeekBarChangeListener {
         void onChanged(CircleSeekBar seekbar, int curValue);
     }
+
+    public void setTouchable(Boolean val)
+    {
+        isCanTouch = val;
+    }
 }
